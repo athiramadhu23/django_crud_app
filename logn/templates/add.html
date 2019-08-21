@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+<center>
+
+    <form method="post">
+         {% csrf_token %}
+<table>
+
+<tr>
+<td>Number1:</td>
+<td><input type="text" size=20 name="num1"></td>
+</tr>
+
+<tr>
+<td>Number2:</td>
+<td><input type="text" size=20 name="num2"></td>
+</tr>
+    <td> <input class="btn btn-danger" type="submit" size="20" value="Add"></td>
+    <td> {{ out }}</td>
+
+</table>
+    </form>
+</body>
+</html>

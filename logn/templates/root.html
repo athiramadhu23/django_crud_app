@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title> Login Page </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<center>
+
+
+ <div class="row">
+  <div class="col"></div>
+  <div class="col">
+
+<table class="table table-dark">
+<form method="post">
+    {% csrf_token %}
+
+<tr>
+<td><font size=5><b> Login Page</b></font></td>
+</tr>
+
+<tr>
+<td>Email:</td>
+<td><input type="text" size=20 name="userid"></td>
+</tr>
+
+<tr>
+<td>Password:</td>
+<td><input type="password" size=20 name="pwd"></td>
+</tr>
+
+<tr>
+<td ><input  class="btn btn-danger"  type="Reset"></td>
+<td><input class="btn btn-dark" type="submit" size=20 value="Login"></td>
+</tr>
+
+</table>
+<br>
+</div>
+  <div class="col">
+
+      <h2> {{ msg }} </h2>
+
+<a href = "{% url 'signup' %}"><input  class="btn btn-info"  type="button" value= "SignUp"></a>
+
+
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>
